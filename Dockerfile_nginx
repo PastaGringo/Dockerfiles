@@ -1,0 +1,6 @@
+FROM ubuntu
+MAINTAINER PastaGringo <pstr@protonmail.com> 
+RUN	apt-get update 
+RUN	apt-get install -y nginx nano wget 
+EXPOSE 80 443
+CMD ["nginx", "-g", "daemon off;"]
