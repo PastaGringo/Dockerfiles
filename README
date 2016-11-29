@@ -3,4 +3,7 @@ Hello!
 This repo contains my Dockerfiles tests.
 Use at your own risk ;)
 
+To start the nginx container : 
+#docker run -d -p 80:80 --name pasta_nginx --net=bridge pastagringo/pasta_nginx
+
 PastaGringo.
