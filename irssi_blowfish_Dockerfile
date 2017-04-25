@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y \
 		build-essential \
 		irssi \
 		irssi-dev \
@@ -8,12 +8,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		libssl-dev \
 		cmake \
 		git \
-
-ENV HOME /home/user
-RUN useradd --create-home --home-dir $HOME user \
-	&& mkdir -p $HOME/.irssi \
-	&& chown -R user:user $HOME
-
-WORKDIR $HOME
 
 CMD ["nano"]
