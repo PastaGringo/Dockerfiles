@@ -20,4 +20,6 @@ RUN sudo make install
 RUN mkdir /home/johndoe/.irssi 
 RUN echo "load /usr/local/lib/irssi/modules/libfish.so" >> /home/johndoe/.irssi/startup
 
+WORKDIR /home/johndoe/
+
 CMD ["irssi"]
